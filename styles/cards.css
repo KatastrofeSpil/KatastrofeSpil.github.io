@@ -1,19 +1,9 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    color: rgb(0, 255, 0);
-}
-
 .card {
     text-decoration: none;
     position: absolute;
-    border: 5px solid green;
-    color: green;
-    background-color: black;
+    border: 5px solid var(--main-fg);
+    color: var(--main-fg);
+    background-color: var(--main-bg);
     border-radius: 20px;
     width: 200px;
     height: 300px;
@@ -42,7 +32,7 @@ body {
 
 .cardContainer {
     display: flex;
-    background-color: black;
+    background-color: var(--main-bg);
     height: 100vh;
     position: relative;
 }
