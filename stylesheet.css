@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
-    color: white;
+    color: rgb(0, 255, 0);
 }
 
 .card {
@@ -64,6 +68,20 @@ body {
     margin-left: -35px;
     top: 10vh;
     transform: rotate(25deg);
+}
+
+@media (max-width:800px) {
+    .card:nth-child(2) {
+        margin-left: -105px;
+    }
+    .card:nth-child(1) {
+        margin-left: -230px;
+        transform: rotate(-15deg);
+    }
+    .card:nth-child(3) {
+        margin-left: 20px;
+        transform: rotate(15deg);
+    }
 }
 
 .card:nth-child(2):hover {
