@@ -1,0 +1,102 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.card {
+    position: absolute;
+    border: 5px solid green;
+    color: green;
+    background-color: black;
+    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.cardIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+.cardText {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.cardContainer {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+
+.card:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 2.5vh;
+    z-index: 3;
+}
+
+.card:nth-child(1) {
+    left: 50%;
+    margin-left: -265px;
+    top: 10vh;
+    transform: rotate(-25deg);
+    z-index: 2;
+}
+
+.card:nth-child(3) {
+    left: 50%;
+    margin-left: -35px;
+    top: 10vh;
+    transform: rotate(25deg);
+}
+
+.card:nth-child(2):hover {
+    transform: translate(0,-25px);
+}
+
+.card:nth-child(1):hover {
+    transform: translate(-75px,-25px);
+}
+
+.card:nth-child(3):hover {
+    transform: translate(75px,-25px);
+}
+
+.card:nth-child(1) .cardText b:after {
+    content: 'KAT';
+}
+
+.card:nth-child(1):hover .cardText b:after {
+    content: 'ABOUT';
+}
+
+.card:nth-child(2) .cardText b:after {
+    content: 'ASTR';
+}
+
+.card:nth-child(2):hover .cardText b:after {
+    content: 'GO DOWN';
+}
+
+.card:nth-child(3) .cardText b:after {
+    content: 'OFE';
+}
+
+.card:nth-child(3):hover .cardText b:after {
+    content: 'PLAY';
+}
