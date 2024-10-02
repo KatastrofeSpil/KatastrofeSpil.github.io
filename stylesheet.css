@@ -1,9 +1,11 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
     color: white;
 }
 
 .card {
+    text-decoration: none;
     position: absolute;
     border: 5px solid green;
     color: green;
@@ -23,7 +25,6 @@ body {
     width: 75px;
 }
 .cardText {
-    font-family: 'Courier New', Courier, monospace;
     font-size: 45px;
     margin-top: 45px;
     margin-bottom: 45px;
@@ -46,7 +47,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -150px;
-    top: 2.5vh;
+    top: 3.5vh;
     z-index: 3;
 }
 
