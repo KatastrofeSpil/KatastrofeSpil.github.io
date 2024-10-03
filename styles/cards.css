@@ -91,7 +91,7 @@
 }
 
 .card:nth-child(1):hover .cardText b:after {
-    content: 'ABOUT';
+    content: 'OM';
 }
 
 .card:nth-child(2) .cardText b:after {
@@ -99,7 +99,7 @@
 }
 
 .card:nth-child(2):hover .cardText b:after {
-    content: 'GO DOWN';
+    content: 'INFO';
 }
 
 .card:nth-child(3) .cardText b:after {
@@ -107,5 +107,5 @@
 }
 
 .card:nth-child(3):hover .cardText b:after {
-    content: 'PLAY';
+    content: 'SPIL';
 }
