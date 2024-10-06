@@ -1,7 +1,140 @@
-#TextBody {
-    background-color: var(--alt-bg);
-    margin: 0 20px 0 20px;
-    padding: 5px 20px 5px 20px;
-    border-radius: 10px;
+.card {
+    text-decoration: none;
+    position: absolute;
     border: 5px solid var(--main-fg);
+    color: var(--main-fg);
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.mobile .card {
+    width: 150px;
+    height: 200px;
+}
+
+.cardIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+.mobile .cardIcon {
+    width: 50px;
+}
+
+.cardText {
+    font-size: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.mobile .cardText {
+    margin-bottom: 25px;
+}
+
+.cardContainer {
+    display: flex;
+    background-color: var(--main-bg);
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile .cardContainer {
+    height: 85vh;
+}
+
+.card:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 3.5vh;
+    z-index: 3;
+}
+
+.card:nth-child(1) {
+    left: 50%;
+    margin-left: -215px;
+    top: 10vh;
+    transform: rotate(-25deg);
+    z-index: 2;
+}
+
+.card:nth-child(3) {
+    left: 50%;
+    margin-left: 15px;
+    top: 10vh;
+    transform: rotate(25deg);
+}
+
+.mobile .card:nth-child(2) {
+    margin-left: -80px;
+}
+.mobile .card:nth-child(1) {
+    margin-left: -195px;
+    transform: rotate(-30deg) translate(15px,-10px);
+}
+.mobile .card:nth-child(3) {
+    margin-left: 35px;
+    transform: rotate(30deg) translate(-15px,-10px);
+}
+
+#boxContainer {
+    overflow: hidden;
+}
+
+#box {
+    width: 140vw;
+    margin-left: -20vw;
+}
+
+.mobile #box {
+    margin-left: -22.5vw;
+}
+
+.card:nth-child(2):hover {
+    transform: translate(0,-25px);
+}
+
+.card:nth-child(1):hover {
+    transform: translate(-75px,-25px);
+}
+
+.card:nth-child(3):hover {
+    transform: translate(75px,-25px);
+}
+
+.card:nth-child(1) .cardText b:after {
+    content: 'KAT';
+}
+
+.card:nth-child(1):hover .cardText b:after {
+    content: 'OM OS';
+}
+
+.card:nth-child(2) .cardText b:after {
+    content: 'ASTR';
+}
+
+.card:nth-child(2):hover .cardText b:after {
+    content: 'SPIL';
+}
+
+.card:nth-child(3) .cardText b:after {
+    content: 'OFE';
+}
+
+.card:nth-child(3):hover .cardText b:after {
+    content: 'REGLER';
 }
