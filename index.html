@@ -4,33 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/general.css">
-<link rel="stylesheet" href="styles/cards.css">
 <link rel="stylesheet" href="styles/index.css">
-<script src="index.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="scripts/index.js"></script> 
+<script src="scripts/jquery-3.7.1.min.js"></script>
 <title>Katastrofe</title>
 </head>
 <body>
+    <script>
+        LoadNavBar = function() {
+            // loading a different nav bar depending on phone type
+            if (
+                navigator.userAgent.match(/Android/i) || 
+                navigator.userAgent.match(/webOS/i) || 
+                navigator.userAgent.match(/iPhone/i) || 
+                navigator.userAgent.match(/iPad/i) || 
+                navigator.userAgent.match(/iPod/i) || 
+                navigator.userAgent.match(/BlackBerry/i) || 
+                navigator.userAgent.match(/Windows Phone/i) || 
+                Math.min(window.screen.width, window.screen.height) < 768 || 
+                (navigator.userAgent.indexOf("Mobi") > -1)
+            ){
+                document.documentElement.classList.toggle("mobile", true);
+            }
+            // nav bar for touch-screen (mobile) devices
+            else 
+            {
+                document.documentElement.classList.toggle("mobile", false);
+            }
+        };
+        
+        window.onresize = function() {
+            LoadNavBar()
+        };
+        LoadNavBar()
+    </script>
+    <!--end of mobile code-->
 <div class="cardContainer">
     <a href="about.html" class="card">
         <p class="cardText"><b></b></p>
         <img class="cardIcon" src="img/about.svg" alt="">
     </a>
-    <a href='javascript:;' onclick="ScrollDown()" class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/star.svg" alt="">
-    </a>
-    <a href="play.html" class="card">
+    <a href='play.html' class="card">
         <p class="cardText"><b></b></p>
         <img class="cardIcon" src="img/play.svg" alt="">
     </a>
+    <a href="rules.html" class="card">
+        <p class="cardText"><b></b></p>
+        <img class="cardIcon" src="img/rules.svg" alt="">
+    </a>
 </div>
-<section id="TextBody">
-    <p><b>Katastrofe</b> is a learning board game that teaches kids how to be safe online!</p>
-    <p>The game is simply about moving across a linear<b>(ish)</b> board, landing on spaces and drawing cards with questions on them.</p>
+<section class="TextBody">
+    <p><b>Katastrofe</b> er et læringsbrætspil som lærer børn hvordan man er sikker online!</p>
+    <p>Spillet er simplet hen om at rulle en terning, bevæge sig over et <b>(semi)</b>lineært bræt, trække kort og svare sociale situationer der er på dem.</p>
 </section>
-<div>
-<img src="3d/Embellage.png" width="100%">
+<div id="boxContainer">
+    <img src="3d/Embellage.png" id="box">
 </div>
+<!--
+<div class="TextBody">
+<p><b>Q/A</b></p>
+<details>
+    <summary>
+        Spørgsmål 1
+    </summary>
+    <p>Svar 1</p>
+</details>
+<details>
+    <summary>
+        Spørgsmål 2
+    </summary>
+    <p>Svar 2</p>
+</details>
+<details>
+    <summary>
+        Spørgsmål 3
+    </summary>
+    <p>Svar 3</p>
+</details>
+</div>
+-->
 </body>
 </html>
