@@ -5,11 +5,15 @@ body {
 #video, #image {
     position: absolute;
     left: 50%;
-    margin-left: -45vw;
-    width: 90vw;
     object-fit: cover;
 }
-.image {
+#video {
+    height: 90vh;
+    margin-left: -45vh;
+}
+#image {
+    margin-left: -45vw;
+    width: 90vw;
     z-index: -1;
 }
 
