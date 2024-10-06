@@ -12,3 +12,32 @@ body {
     color: var(--main-fg);
     font-size: 25px;
 }
+
+.TextBody {
+    background-color: var(--alt-bg);
+    margin: 0 20px 0 20px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    border: 5px solid var(--main-fg);
+}
+
+.returnButton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    color: var(--main-fg);
+    text-decoration: none;
+    font-size: 32px;
+    text-align: start;
+    border: 2px solid var(--alt-fg);
+    background-color: var(--alt-bg);
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0 16px 0 0;
+    padding: 5px;
+}
+
+.returnButton span:after {
+    content: "Hjem";
+}
