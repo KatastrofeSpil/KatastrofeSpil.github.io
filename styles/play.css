@@ -1,0 +1,168 @@
+body {
+    overflow: hidden;
+}
+
+#video, #image {
+    position: absolute;
+    left: 50%;
+    margin-left: -45vw;
+    width: 90vw;
+    object-fit: cover;
+}
+.image {
+    z-index: -1;
+}
+
+.card {
+    text-decoration: none;
+    position: absolute;
+    border: 5px solid var(--main-fg);
+    color: var(--main-fg);
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    transform: rotateX(90deg);
+    transition: transform 0.5s;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+}
+
+.mobile .card {
+    width: 150px;
+    height: 200px;
+}
+
+@keyframes NormalReveal1st {
+    from {
+        transform: rotateX(90deg);
+        margin-left: -175px;
+        top: 33vh;
+    }
+    to {
+        transform: rotateX(0deg);
+        margin-left: -250px;
+        top: 2.5vh;
+    }
+}
+
+@keyframes NormalReveal2nd {
+    from {
+        transform: rotateX(90deg);
+        margin-left: 0px;
+        top: 33vh;
+    }
+    to {
+        transform: rotateX(0deg);
+        margin-left: 20px;
+        top: 2.5vh;
+    }
+}
+
+@keyframes MobileReveal1st {
+    from {
+        transform: rotateX(90deg);
+        margin-left: -175px;
+        top: 15vh;
+    }
+    to {
+        transform: rotateX(0deg);
+        margin-left: -175px;
+        top: 2.5vh;
+    }
+}
+
+@keyframes MobileReveal2nd {
+    from {
+        transform: rotateX(90deg);
+        margin-left: 0px;
+        top: 15vh;
+    }
+    to {
+        transform: rotateX(0deg);
+        margin-left: 20px;
+        top: 2.5vh;
+    }
+}
+
+.card:nth-child(1) {
+    animation-name: NormalReveal1st;
+    animation-delay: 0.75s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-left: -150px;
+    top: 33vh;
+}
+
+.mobile .card:nth-child(1) {
+    animation-name: MobileReveal1st;
+    animation-delay: 0.25s;
+}
+
+.card:nth-child(2) {
+    animation-name: NormalReveal2nd;
+    animation-delay: 0.75s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-left: 0px;
+    top: 33vh;
+}
+
+.mobile .card:nth-child(2) {
+    animation-name: MobileReveal2nd;
+    animation-delay: 0.25s;
+}
+
+
+.cardIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+.mobile .cardIcon {
+    width: 50px;
+}
+
+.cardText {
+    font-size: 45px;
+    margin-top: 45px;
+    text-align: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.cardContainer {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.card:nth-child(1):hover {
+    transform: translate(-5px, -5px) !important;
+}
+
+.card:nth-child(2):hover {
+    transform: translate(5px, -5px) !important;
+}
+
+.card:nth-child(1) .cardText b:after {
+    content: 'A3';
+}
+
+.card:nth-child(2) .cardText b:after {
+    content: 'A4';
+}
+
+.cardIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
