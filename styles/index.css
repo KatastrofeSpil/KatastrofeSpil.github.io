@@ -99,6 +99,13 @@
     margin-left: -20vw;
 }
 
+.header {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -145px;
+}
+
 .mobile #box {
     margin-left: -22.5vw;
 }
@@ -116,25 +123,13 @@
 }
 
 .card:nth-child(1) .cardText b:after {
-    content: 'KAT';
-}
-
-.card:nth-child(1):hover .cardText b:after {
     content: 'OM OS';
 }
 
 .card:nth-child(2) .cardText b:after {
-    content: 'ASTR';
-}
-
-.card:nth-child(2):hover .cardText b:after {
     content: 'SPIL';
 }
 
 .card:nth-child(3) .cardText b:after {
-    content: 'OFE';
-}
-
-.card:nth-child(3):hover .cardText b:after {
     content: 'REGLER';
 }
