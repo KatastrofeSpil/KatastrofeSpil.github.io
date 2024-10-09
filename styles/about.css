@@ -1,14 +1,87 @@
-.Creators {
-    width: 90vw;
-    margin-left: 3.5vw;
-    height: 100px;
-    -webkit-filter: drop-shadow(2px 2px 0 white)
-                    drop-shadow(-2px 2px 0 white)
-                    drop-shadow(2px -2px 0 white)
-                    drop-shadow(-2px -2px 0 white);
+#Creators {
+    display: flex;
+    justify-content: space-between;
+}
 
-    filter: drop-shadow(2px 2px 0 white)
-            drop-shadow(-2px 2px 0 white)
-            drop-shadow(2px -2px 0 white)
-            drop-shadow(-2px -2px 0 white);
+.Creator img {
+    width: 100px;
+    margin: 0;
+}
+
+.Creator:first-child {
+    margin-left: 30px;
+}
+
+.Creator:last-child {
+    margin-right: 20px;
+}
+
+.Creator {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Clipping */
+}
+
+.Creator img {
+    display: block; /* Removes bottom space */
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.Creator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-fg); /* Your desired color */
+    opacity: 1; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    mix-blend-mode: multiply; /* Blend mode */
+}
+
+.tooltip:hover .Creator::before {
+    opacity: 0; /* Show overlay on hover */
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: var(--main-bg);
+    color: var(--main-fg);
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid var(--main-fg);
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip .tooltiptext {
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tooltip:first-child .tooltiptext {
+    width: 140px;
+}
+
+.tooltip:last-child .tooltiptext {
+    width: 200px;
+    margin-left: -145px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
