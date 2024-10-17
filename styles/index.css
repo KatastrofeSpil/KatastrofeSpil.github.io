@@ -27,6 +27,7 @@ body {
     margin-right: auto;
     width: 75px;
 }
+
 .mobile .cardIcon {
     width: 50px;
 }
@@ -37,10 +38,14 @@ body {
     margin-bottom: 45px;
     text-align: center;
     align-items: center;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 }
 
 .mobile .cardText {
@@ -85,13 +90,15 @@ body {
 .mobile .card:nth-child(2) {
     margin-left: -80px;
 }
+
 .mobile .card:nth-child(1) {
     margin-left: -195px;
-    transform: rotate(-30deg) translate(15px,-10px);
+    transform: rotate(-30deg) translate(15px, -10px);
 }
+
 .mobile .card:nth-child(3) {
     margin-left: 35px;
-    transform: rotate(30deg) translate(-15px,-10px);
+    transform: rotate(30deg) translate(-15px, -10px);
 }
 
 #boxContainer {
@@ -115,15 +122,15 @@ body {
 }
 
 .card:nth-child(2):hover {
-    transform: translate(0,-25px);
+    transform: translate(0, -25px);
 }
 
 .card:nth-child(1):hover {
-    transform: translate(-75px,-25px);
+    transform: translate(-75px, -25px);
 }
 
 .card:nth-child(3):hover {
-    transform: translate(75px,-25px);
+    transform: translate(75px, -25px);
 }
 
 .card:nth-child(1) .cardText b:after {
