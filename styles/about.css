@@ -1,6 +1,12 @@
 #Creators {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.mobile #Creators {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .Creator img {
@@ -8,24 +14,20 @@
     margin: 0;
 }
 
-.Creator:first-child {
-    margin-left: 30px;
-}
-
-.Creator:last-child {
-    margin-right: 20px;
-}
-
 .Creator {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* Clipping */
+    overflow: hidden;
+    /* Clipping */
 }
 
 .Creator img {
-    display: block; /* Removes bottom space */
-    width: 100%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+    display: block;
+    /* Removes bottom space */
+    width: 100%;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 .Creator::before {
@@ -35,14 +37,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--main-fg); /* Your desired color */
-    opacity: 1; /* Start invisible */
-    transition: opacity 0.3s ease; /* Smooth transition */
-    mix-blend-mode: multiply; /* Blend mode */
+    background-color: var(--main-fg);
+    /* Your desired color */
+    opacity: 1;
+    /* Start invisible */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+    mix-blend-mode: multiply;
+    /* Blend mode */
 }
 
 .tooltip:hover .Creator::before {
-    opacity: 0; /* Show overlay on hover */
+    opacity: 0;
+    /* Show overlay on hover */
 }
 
 /* Tooltip container */
@@ -69,7 +76,8 @@
 .tooltip .tooltiptext {
     top: 100%;
     left: 50%;
-    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-left: -60px;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 .tooltip:first-child .tooltiptext {

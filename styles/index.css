@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .card {
     text-decoration: none;
     position: absolute;

@@ -1,76 +1,78 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/general.css">
-<link rel="stylesheet" href="styles/play.css">
-<script src="scripts/jquery-3.7.1.min.js"></script>
-<script src="scripts/play.js"></script>
-<title>Katastrofe spil</title>
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="img/star.svg">
-<meta name="description" content="et brætspil som lærer børn hvordan man er sikker online">
-<meta name="keywords" content="Brætspil, internet sikkerhed, ON, red barnet">
-<meta name="author" content="Cornelius Rosenaa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/play.css">
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/play.js"></script>
+    <title>Katastrofe spil</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="img/star.svg">
+    <meta name="description" content="et brætspil som lærer børn hvordan man er sikker online">
+    <meta name="keywords" content="Brætspil, internet sikkerhed, ON, red barnet">
+    <meta name="author" content="Cornelius Rosenaa">
 </head>
+
 <body>
-<script>
-    LoadNavBar = function() {
-        // loading a different nav bar depending on phone type
-        if (
-            navigator.userAgent.match(/Android/i) || 
-            navigator.userAgent.match(/webOS/i) || 
-            navigator.userAgent.match(/iPhone/i) || 
-            navigator.userAgent.match(/iPad/i) || 
-            navigator.userAgent.match(/iPod/i) || 
-            navigator.userAgent.match(/BlackBerry/i) || 
-            navigator.userAgent.match(/Windows Phone/i) || 
-            Math.min(window.screen.width, window.screen.height) < 768 || 
-            (navigator.userAgent.indexOf("Mobi") > -1)
-        ){
-            document.documentElement.classList.toggle("mobile", true);
-        }
-        // nav bar for touch-screen (mobile) devices
-        else 
-        {
-            document.documentElement.classList.toggle("mobile", false);
-        }
-    };
-    
-    window.onresize = function() {
+    <script>
+        LoadNavBar = function () {
+            // loading a different nav bar depending on phone type
+            if (
+                navigator.userAgent.match(/Android/i) ||
+                navigator.userAgent.match(/webOS/i) ||
+                navigator.userAgent.match(/iPhone/i) ||
+                navigator.userAgent.match(/iPad/i) ||
+                navigator.userAgent.match(/iPod/i) ||
+                navigator.userAgent.match(/BlackBerry/i) ||
+                navigator.userAgent.match(/Windows Phone/i) ||
+                Math.min(window.screen.width, window.screen.height) < 768 ||
+                (navigator.userAgent.indexOf("Mobi") > -1)
+            ) {
+                document.documentElement.classList.toggle("mobile", true);
+            }
+            // nav bar for touch-screen (mobile) devices
+            else {
+                document.documentElement.classList.toggle("mobile", false);
+            }
+        };
+
+        window.onresize = function () {
+            LoadNavBar()
+        };
         LoadNavBar()
-    };
-    LoadNavBar()
-</script>
-<!--end of mobile code-->
-<video id="video" autoplay muted>
-    <source src="3d/OpenBox.webm" type="video/webm">
-</video>
-<a class="returnButton" href="/">
-    <img src="img/return.svg" alt="">
-    <span></span>
-</a>
-<img id="image" src="3d/OpenBox.png" alt="">
-<div class="cardContainer">
-    <a href="PDFs/A3.pdf" class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/paper.svg" alt="">
+    </script>
+    <!--end of mobile code-->
+    <video id="video" autoplay muted>
+        <source src="3d/OpenBox.webm" type="video/webm">
+    </video>
+    <a class="returnButton" href="/">
+        <img src="img/return.svg" alt="">
+        <span></span>
     </a>
-    </a>
-    <a href="PDFs/A4.pdf" class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/paper.svg" alt="">
-    </a>
-</div>
-<script>
-    var vid = document.getElementById("video");
-    var image = document.getElementById("image");
-    vid.oncanplaythrough = function() {
-        console.log("Can play through video without stopping");
-        vid.play()
-        image.remove()
-    };
-</script>
+    <img id="image" src="3d/OpenBox.png" alt="">
+    <div class="cardContainer">
+        <a href="PDFs/A3.pdf" class="card">
+            <p class="cardText"><b></b></p>
+            <img class="cardIcon" src="img/paper.svg" alt="">
+        </a>
+        </a>
+        <a href="PDFs/A4.pdf" class="card">
+            <p class="cardText"><b></b></p>
+            <img class="cardIcon" src="img/paper.svg" alt="">
+        </a>
+    </div>
+    <script>
+        var vid = document.getElementById("video");
+        var image = document.getElementById("image");
+        vid.oncanplaythrough = function () {
+            console.log("Can play through video without stopping");
+            vid.play()
+            image.remove()
+        };
+    </script>
 </body>
+
 </html>

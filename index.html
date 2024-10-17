@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/general.css">
-<link rel="stylesheet" href="styles/index.css">
-<script src="scripts/index.js"></script> 
-<script src="scripts/jquery-3.7.1.min.js"></script>
-<title>Katastrofe spil</title>
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="img/star.svg">
-<meta name="description" content="et brætspil som lærer børn hvordan man er sikker online">
-<meta name="keywords" content="Brætspil, internet sikkerhed, ON, red barnet">
-<meta name="author" content="Cornelius Rosenaa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <title>Katastrofe spil</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="img/star.svg">
+    <meta name="description" content="et brætspil som lærer børn hvordan man er sikker online">
+    <meta name="keywords" content="Brætspil, internet sikkerhed, ON, red barnet">
+    <meta name="author" content="Cornelius Rosenaa">
 </head>
+
 <body>
-<script>
-    LoadNavBar = function() {
-        // loading a different nav bar depending on phone type
-        if (
-            navigator.userAgent.match(/Android/i) || 
-            navigator.userAgent.match(/webOS/i) || 
-            navigator.userAgent.match(/iPhone/i) || 
-            navigator.userAgent.match(/iPad/i) || 
-            navigator.userAgent.match(/iPod/i) || 
-            navigator.userAgent.match(/BlackBerry/i) || 
-            navigator.userAgent.match(/Windows Phone/i) || 
-            Math.min(window.screen.width, window.screen.height) < 768 || 
-            (navigator.userAgent.indexOf("Mobi") > -1)
-        ){
-            document.documentElement.classList.toggle("mobile", true);
-        }
-        // nav bar for touch-screen (mobile) devices
-        else 
-        {
-            document.documentElement.classList.toggle("mobile", false);
-        }
-    };
-    
-    window.onresize = function() {
+    <script>
+        LoadNavBar = function () {
+            // loading a different nav bar depending on phone type
+            if (
+                navigator.userAgent.match(/Android/i) ||
+                navigator.userAgent.match(/webOS/i) ||
+                navigator.userAgent.match(/iPhone/i) ||
+                navigator.userAgent.match(/iPad/i) ||
+                navigator.userAgent.match(/iPod/i) ||
+                navigator.userAgent.match(/BlackBerry/i) ||
+                navigator.userAgent.match(/Windows Phone/i) ||
+                Math.min(window.screen.width, window.screen.height) < 768 ||
+                (navigator.userAgent.indexOf("Mobi") > -1)
+            ) {
+                document.documentElement.classList.toggle("mobile", true);
+            }
+            // nav bar for touch-screen (mobile) devices
+            else {
+                document.documentElement.classList.toggle("mobile", false);
+            }
+        };
+
+        window.onresize = function () {
+            LoadNavBar()
+        };
         LoadNavBar()
-    };
-    LoadNavBar()
-</script>
-<!--end of mobile code-->
-<h1 class="header">KATASTROFE</h1>
-<div class="cardContainer">
-    <a href="about.html" class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/about.svg" alt="">
-    </a>
-    <a href='play.html' class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/play.svg" alt="">
-    </a>
-    <a href="rules.html" class="card">
-        <p class="cardText"><b></b></p>
-        <img class="cardIcon" src="img/rules.svg" alt="">
-    </a>
-</div>
-<section class="TextBody">
-    <p><b>Katastrofe</b> er et brætspil som lærer børn hvordan man er sikker online!</p>
-    <p>Spillet er simplet hen om at rulle en terning, bevæge sig over et <b>(semi)</b>lineært bræt, trække kort og svare sociale situationer der er på dem.</p>
-</section>
-<div id="boxContainer">
-    <img src="3d/Embellage.png" id="box">
-</div>
-<!--
+    </script>
+    <!--end of mobile code-->
+    <h1 class="header">KATASTROFE</h1>
+    <div class="cardContainer">
+        <a href="about.html" class="card">
+            <p class="cardText"><b></b></p>
+            <img class="cardIcon" src="img/about.svg" alt="">
+        </a>
+        <a href='play.html' class="card">
+            <p class="cardText"><b></b></p>
+            <img class="cardIcon" src="img/play.svg" alt="">
+        </a>
+        <a href="rules.html" class="card">
+            <p class="cardText"><b></b></p>
+            <img class="cardIcon" src="img/rules.svg" alt="">
+        </a>
+    </div>
+    <section class="TextBody">
+        <p><b>Katastrofe</b> er et brætspil som lærer børn hvordan man er sikker online!</p>
+        <p>Spillet er simplet hen om at rulle en terning, bevæge sig over et <b>(semi)</b>lineært bræt, trække kort og
+            svare sociale situationer der er på dem.</p>
+    </section>
+    <div id="boxContainer">
+        <img src="3d/Embellage.png" id="box">
+    </div>
+    <!--
 <div class="TextBody">
 <p><b>Q/A</b></p>
 <details>
@@ -90,4 +92,5 @@
 </div>
 -->
 </body>
+
 </html>
