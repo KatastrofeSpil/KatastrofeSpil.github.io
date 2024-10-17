@@ -82,11 +82,12 @@
 
 .tooltip:first-child .tooltiptext {
     width: 140px;
+    margin-left: -50px;
 }
 
 .tooltip:last-child .tooltiptext {
     width: 200px;
-    margin-left: -145px;
+    margin-left: -150px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
