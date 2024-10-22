@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #video,
@@ -7,6 +7,13 @@ body {
     position: absolute;
     left: 50%;
     object-fit: cover;
+}
+
+.mobile #video,
+.mobile #image {
+    width: 90vw !important;
+    height: 90vw;
+    margin-left: -45vw;
 }
 
 #video {
